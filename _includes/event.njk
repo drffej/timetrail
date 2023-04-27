@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-teal w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Island</a>
+    <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Lake</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">5K</a>
+    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+  </div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">HOME</a>
+  <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Island</a>
+  <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Lake</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">5K</a>
+</div>
+
+<!-- Page content -->
+
+<div class="w3-row-padding w3-padding-24 w3-container" style="margin-top:46px;">
+  <div class="w3-content">
+       <h1>{{ title }}</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <button class="w3-btn w3-white w3-border w3-border-teal w3-text-teal w3-round-large" onclick="show('course')">Course Information <i class="fa fa-caret-down"></i></button>
+      <button class="w3-btn w3-white w3-border w3-border-red w3-text-red w3-round-large">Leader Board</button>
+      <button class="w3-btn w3-white w3-border w3-border-red w3-text-red w3-round-large">All Runs</button>
+      
+  </div>
+</div>
+
+<!-- Second Grid -->
+<div id="course" class="w3-row-padding w3-light-grey w3-padding w3-container" style="display: none">
+  <div class="w3-content">
+    <div class="w3-half w3-middle">
+      <img class="w3-image  w3-round" src="/public/5k-map.png">
+    </div>
+
+    <div class="w3-half">
+      <div class="w3-container w3-padding-left">
+      <h1>Lorem Ipsum</h1>
+      <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
+
+      <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding w3-container">
+  <div class="w3-content">
+      <h1>Lorem Ipsum</h1>
+      <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
+
+      <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat.</p>
+    
+<h1>{{ title }}</h1>
+
+<table class="sortable w3-table w3-border w3-striped">
+<thead class="w3-teal">
+<tr>
+  <th>Name</th>
+  <th>Club</th>
+  <th>Cat</th>
+  <th>Time</th>
+  <th>Boat</th>
+</tr>
+</thead>
+<tbody>
+{% for race in collections.competitors| getFastestTime(1)  %}
+    <tr>
+    <td>{{ race.name }}</td>
+    <td>{{ race.club}}</td>
+    <td>{{ race.cat }}</td>
+    <td>{{ race.time }}</td>
+    <td>{{race.boat }}</td>
+    </tr>
+{% endfor %}
+</tbody>
+</table>
+    
+  </div>
+</div>
+
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+
+<!-- End Page Content -->
+</div>
+<script src="/public/js/sorttable.js"></script>
+<script>
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+var toggleElement = false;
+function show(element){
+  if (toggleElement){
+    document.getElementById(element).style.display = "";
+  }
+  else {
+    document.getElementById(element).style.display = "none";
+  }
+  toggleElement = !toggleElement;
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+{{ name }} 
+
+{% for event in events %}
+    {{ event.event | log }}
+    {% for race in event.races | sort(attribute='time') %}
+        {{ race | log }}
+    {% endfor %}
+{% endfor %}
+
+
+
+
+{{ collections.competitors| getFastestTime(1) | log  }}
+
+
+  {{ content | safe }}
