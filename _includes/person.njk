@@ -1,16 +1,63 @@
-{{ name }} 
+<!DOCTYPE html>
+<html lang="en">
+{% include "components/header.njk" %}
+<body>
+
+<!-- Navbar -->
+{% include "components/navbar.njk" %}
+
+<!-- Page content -->
+
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding w3-container" style="margin-top:46px;">
+  <div class="w3-content">
+    <h1>{{ title }}</h1>
+    <p>{{ content | safe }}</p>
 
 {% for event in events %}
-    {{ event.event | log }}
-    {% for race in event.races | sort(attribute='time') %}
-        {{ race | log }}
-    {% endfor %}
+    <h3>{{ event.event }}</h3>
+    
+    <div class="w3-responsive">
+      <span class="w3-opacity">Click on columns to sort</span>
+      <table class="sortable w3-table w3-border w3-striped">
+      <thead class="w3-teal">
+      <tr>
+        <th>Run</th>
+        <th>Name</th>
+        <th>Club</th>
+        <th>Cat</th>
+        <th>Time</th>
+        <th>Boat</th>
+        <th>Date</th>
+      </tr>
+      </thead>
+      <tbody>
+      {% set index = 1 %}
+      {% for race in event.races | sort(attribute='time') %}
+          <tr>
+          <td>{{ index }}</td>
+          <td>{{ name }}</td>
+          <td>{{ club}}</td>
+          <td>{{ race.cat }}</td>
+          <td>{{ race.time }}</td>
+          <td>{{race.boat }}</td>
+          <td>{{ race.date }}</td>
+          </tr>
+          {% set index = index + 1 %}
+      {% endfor %}
+      </tbody>
+      </table>
+    </div>
+    <p class="w3-opacity">{{ index-1 }} {% if index-1 > 1 %} attempts. {% else %} attempt.{% endif %}
 {% endfor %}
+  </div>
+</div>
 
-
-
-
-{{ collections.competitors| getFastestTime(1) | log  }}
-
-
-  {{ content | safe }}
+<script src="/public/js/sorttable.js"></script>
+<!-- Footer -->
+{% include "components/footer.njk" %}
+<!-- End Page Content -->
+</div>
+</body>
+</html>

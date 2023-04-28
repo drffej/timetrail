@@ -10,7 +10,7 @@ events:
         date: dd/yy/mm
         cat: 'K1M'
         boat: 'Taran'
-        time: '00:01:07'
+        time: '00:00:09'
       - id: '2'
         date: dd/yy/mm
         time: '00:06:99'
@@ -27,8 +27,6 @@ events:
       - id: '1'
         date: 27/04/23
         cat: 'K1M'
-        boat: 'K1 Jacuna'
+        boat: 'K1 Kayak'
         time: '00:32:10'
 ---
-
-This is some text text

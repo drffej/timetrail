@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include "components/header.njk" %}
+<body>
+
+<!-- Navbar -->
+{% include "components/navbar.njk" %}
+
+<!-- Page content -->
+
+<div class="w3-row-padding w3-padding-24 w3-container" style="margin-top:46px;">
+  <div class="w3-content">
+    {{ content | safe }}
+  </div>
+</div>
+
+<!-- Footer -->
+{% include "components/footer.njk" %}
+<!-- End Page Content -->
+</div>
+</body>
+</html>

@@ -26,5 +26,3 @@ events:
         date: dd/yy/mm
         time: '00:00:09'
 ---
-
-This is some text text

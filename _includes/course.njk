@@ -1,0 +1,41 @@
+<html lang="en">
+{% include "components/header.njk" %}
+<body>
+
+<!-- Navbar -->
+{% include "components/navbar.njk" %}
+
+<!-- Page content -->
+
+<div class="w3-row-padding w3-padding-24 w3-container" style="margin-top:46px;">
+  <div class="w3-content">
+       <h1>{{ title }}</h1>
+      <p>This time trial may be an unsupervised challenge. <a href="/safety">Read the safety pages.</a> 
+      <p>{{ description }}</p>
+      <a href="{{ leader }}" class="w3-btn w3-white w3-border w3-border-red w3-text-red w3-round-large">Leader Board</a>
+      <a href="{{ runs }}" class="w3-btn w3-white w3-border w3-border-red w3-text-red w3-round-large">All Runs</a>
+      
+  </div>
+</div>
+
+<!-- Second Grid -->
+<div id="course" class="w3-row-padding w3-light-grey w3-padding w3-container">
+  <div class="w3-content">
+    <div class="w3-half w3-middle">
+      <img class="w3-image  w3-round" src="/public/images/{{ image }}">
+    </div>
+
+    <div class="w3-half">
+      <div class="w3-container w3-padding-left">
+      <p>{{ content | safe }}
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+{% include "components/footer.njk" %}
+<!-- End Page Content -->
+</div>
+</body>
+</html>

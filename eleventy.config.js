@@ -1,8 +1,9 @@
+
+const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+
 module.exports = function(eleventyConfig) {
 
-console.log('here')
-
-	// convert hh:mm:ss to sections
+	// convert hh:mm:ss to seconds
 	function seconds(hms){
 		const [hours, minutes, seconds] = hms.split(':');
 		const number =  Number(hours) * 60 * 60 + Number(minutes) * 60 + Number(seconds);
@@ -26,10 +27,30 @@ console.log('here')
 				}
 			}
 		})
-		console.log(fastestTime)
+		//console.log(fastestTime)
 		return fastestTime;
 	}
 
+	// workout positions
+	function addPositions(results){
+		var newResults = [];
+		var position = 1;
+		for(var i=0; i < results.length; i++){
+			if (i > 0 && results[i].seconds != results[i-1].seconds){
+				position = position + 1
+			}
+			newResults.push( { ...results[i], position: position, eq: ''})
+		}
+
+		for(var i=0; i < newResults.length; i++){
+			if (i > 0 && newResults[i].seconds == newResults[i-1].seconds){
+				newResults[i].eq = '=';
+				newResults[i-1].eq = '=';
+			}
+		}
+
+		return newResults;
+	}
 
 	// Return fastest times for event
 	eleventyConfig.addFilter("getFastestTime", function( competitorCollection, id) {
@@ -40,8 +61,8 @@ console.log('here')
 		competitorCollection.forEach(competitor => {
 			const fastestTime = findFastestTime( competitor.data.events, id)
 			if (fastestTime !== null){
-				console.log('saving',fastestTime)
-				results.push({ ...fastestTime, name: competitor.data.name, club: competitor.data.club} )
+				//console.log('saving',fastestTime)
+				results.push({ ...fastestTime, name: competitor.data.name, club: competitor.data.club, page: competitor.page.url } )
 			}
 			
 		});
@@ -54,12 +75,51 @@ console.log('here')
 			return 0;
 		}
 		
-		return results.sort(compare);
+		return addPositions(results.sort(compare));
 	});
+
+	// Return fastest all times for event
+	eleventyConfig.addFilter("getAllTime", function( competitorCollection, id) {
+		//console.log('got :', competitorCollection,id )
+		//console.log(competitorCollection)
+
+		var results = []; 
+		competitorCollection.forEach(competitor => {
+			// loop through each competitor
+			const events = competitor.data.events;
+			events.forEach(event =>{
+				// add all results for event id
+				if (event.id === id && event.races.length > 0){
+					var secs = 0;
+					var raceResult = null;
+					for(var i=0; i < event.races.length; i++){
+						secs = seconds(event.races[i].time);
+						raceResult = { ...event.races[i], 'seconds': secs, name: competitor.data.name, club: competitor.data.club, page: competitor.page.url };
+						results.push(raceResult)
+					}
+				}
+			})
+		});
+
+		function compare(a,b){
+			if (a.seconds < b.seconds)
+			return -1;
+			if (a.seconds > b.seconds)
+				return 1;
+			return 0;
+		}
+		
+		return addPositions(results.sort(compare));
+	});
+
+
 
 	// add pass through
 	//eleventyConfig.addPassthroughCopy("/public/*.png");
-	eleventyConfig.addPassthroughCopy("/content/**/*.png");
+	//eleventyConfig.addPassthroughCopy("/content/**/*.png");
+
+	// add navigation plug in
+	eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
     return {
 
@@ -71,7 +131,8 @@ console.log('here')
 			"njk",
 			"html",
 			"liquid",
-			"js"
+			"js",
+			"png"
 		],
 
 		// Pre-process *.md files with: (default: `liquid`)
