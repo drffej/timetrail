@@ -58,8 +58,8 @@ console.log('here')
 	});
 
 	// add pass through
-	eleventyConfig.addPassthroughCopy("public/*.png");
-	//eleventyConfig.addPassthroughCopy("**/*.js");
+	//eleventyConfig.addPassthroughCopy("/public/*.png");
+	eleventyConfig.addPassthroughCopy("**/*.png");
 
     return {
 		// Control which files Eleventy will process
