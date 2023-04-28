@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: home.njk
 title: Trentham Lake Challenge
 event_id: 1
 ---
@@ -14,13 +14,3 @@ Doing the challenges can be a journey - improving fitness, technique and learnin
 
 There following challenges are available, pick one, or do them all, you choose.
 
-
-{% for course in collections.courses %}
-    <div class="w3-card-4">
-        <img src="/public/images/{{ course.data.image}}" alt="{{ title }} course" style="width:25%">
-        <div class="w3-container">
-            <p>{{ course.data.description }}</p>
-            <a href="{{ course.page.url  }}">{{ course.data.title }}</a>
-        </div>
-</div>
-{% endfor %}
