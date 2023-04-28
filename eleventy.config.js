@@ -59,9 +59,11 @@ console.log('here')
 
 	// add pass through
 	//eleventyConfig.addPassthroughCopy("/public/*.png");
-	eleventyConfig.addPassthroughCopy("**/*.png");
+	eleventyConfig.addPassthroughCopy("/content/**/*.png");
 
     return {
+
+		passthroughFileCopy: true,
 		// Control which files Eleventy will process
 		// e.g.: *.md, *.njk, *.html, *.liquid
 		templateFormats: [
