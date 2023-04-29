@@ -5,24 +5,40 @@ layout: base.njk
 {{ content | safe }}
 
 <div class="w3-content w3-display-container">
+{% set index =  1%}
 {% for course in collections.courses %}
-    <div class="w3-display-container mySlides">
-        
-      <div class="w3-container w3-center w3-theme w3-padding">
-        <div class="w3-display-topmiddle w3-large w3-container w3-text-black w3-padding">{{ course.data.title }} course</div>
-        <img src="/public/images/{{ course.data.image}}" alt="{{ course.data.title }} course" style="width:50%"> 
- 
-      </div>
+  <div class="w3-display-container mySlides">
       
-        <div class="w3-container w3-medium w3-container w3-padding-16 w3-theme-d1">
-            <p>{{ course.data.description }}</p>
-            <a href="{{ course.page.url  }}" class="w3-btn w3-white w3-border w3-border-teal w3-text-teal w3-round-large">Course Information</a>
-        </div>
+    <div class="w3-display-container w3-center w3-theme w3-padding">
+      <div class="w3-display-topmiddle w3-large w3-container w3-text-black w3-padding">{{ course.data.title }} course</div>
+      <img src="/public/images/{{ course.data.image}}" alt="{{ course.data.title }} course" style="width:50%;cursor:zoom-in" onclick="document.getElementById('{{index}}').style.display='block'"> 
+      <button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+      <button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button> 
+    </div>  
+    <div class="w3-container w3-medium w3-container w3-padding-16 w3-theme-d1">
+      <p>{{ course.data.description }}</p>
+      <a href="{{ course.page.url  }}" class="w3-btn w3-white w3-border w3-border-teal w3-text-teal w3-round-large">Course Information</a>
+      <a href="{{ course.data.leader }}" class="w3-btn w3-white w3-border w3-border-red w3-text-red w3-round-large">Leader Board</a>
+      <a href="{{ course.data.runs }}" class="w3-btn w3-white w3-border w3-border-red w3-text-red w3-round-large">All Runs</a>
     </div>
+    <div id="{{ index }}" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <img src="/public/images/{{ course.data.image}}" style="width:100%">
+      </div>
+  </div>
+  </div>
+  {% set index = index + 1 %}
 {% endfor %}
-  <button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
-    <button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button> 
+  
 </div>
+
+<div class="w3-center">
+  <button class="w3-button demo" onclick="currentDiv(1)">1</button> 
+  <button class="w3-button demo" onclick="currentDiv(2)">2</button> 
+  <button class="w3-button demo" onclick="currentDiv(3)">3</button> 
+</div>
+
 <script>
 var slideIndex = 1;
 showDivs(slideIndex);
@@ -30,6 +46,11 @@ showDivs(slideIndex);
 function plusDivs(n) {
   showDivs(slideIndex += n);
 }
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
 
 function showDivs(n) {
   var i;
@@ -40,5 +61,11 @@ function showDivs(n) {
      x[i].style.display = "none";  
   }
   x[slideIndex-1].style.display = "block";  
+
+  var dots = document.getElementsByClassName("demo");
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-red", "");
+  }  
+  dots[slideIndex-1].className += " w3-red";
 }
 </script>
