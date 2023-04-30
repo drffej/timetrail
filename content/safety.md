@@ -30,7 +30,7 @@ SAFETY:
 -  Avoid rowers and other lake users by following the Lake circulation route (see below)
 -  Paddlers must wear a PFD (Personal Flotation Device) at all times whilst on the water
 -  Safety equipment such as mobile phone, tow line, etc, should be carried as deemed approach in your risk assessment
--  Ensure you signin and signout your lake session in the club house
+-  Ensure you signin and signout your lake session in the boat house
 -  Leave details of your proposed paddle and timings with a 3rd party
 -  We make no claim or assurance that the Lake is safe on the day of your paddle.  You need to do risk assessment on the day of paddle that the challenge is a safe and realistic proposition.
 - If you choose to paddle solo on the lake be aware of the significant risks involved in the event of an issue
