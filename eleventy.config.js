@@ -134,7 +134,11 @@ module.exports = function(eleventyConfig) {
 			"js",
 			"png",
 			"jpg",
-			"ico"
+			"ico",
+			"svg",
+			"xml",
+			"json",
+			"webmanifest"
 		],
 
 		// Pre-process *.md files with: (default: `liquid`)
