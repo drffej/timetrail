@@ -2,7 +2,7 @@
 layout: course.njk
 title: Around the Island
 description: Course is around the first Island  -  starting at the red buoy at the club end of the Lake, around the end of the first Island then back to the red buoy at the club house.
-image: 5k-map.png
+image: island-loop.png
 leader: /timetrials/island
 runs: /timetrials/island
 ---

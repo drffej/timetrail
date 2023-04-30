@@ -7,7 +7,9 @@ eleventyNavigation:
 
 # Safety
 
-One of the main ideas behind the challenge is encourage independent paddling on Trentham Lake.  If you consider undertaking one of the challenges then you must ensure that you fully understand, appreciate and accept the risks involved. You need to take entire responsibility for your actions and for the safety of yourself and any others involved.  Please ensure you read and understand the [Trentham Canoe Club Paddler Policy](https://drive.google.com/drive/folders/11EhDrVyTXSoiYzUq1QNy-JNQAecKcHPW) before doing the challenges.
+One of the main ideas behind the challenge is encourage independent paddling on Trentham Lake.  If you consider undertaking one of the challenges then you must ensure that you fully understand, appreciate and accept the risks involved. You need to take entire responsibility for your actions and for the safety of yourself and any others involved.  
+
+Please ensure you read and understand the [Trentham Canoe Club Paddler Policy](https://drive.google.com/drive/folders/11EhDrVyTXSoiYzUq1QNy-JNQAecKcHPW) before doing the challenges.
 
 If you are not FULLY confident in your abilities and preparation then do not go!
 
@@ -36,7 +38,7 @@ SAFETY:
 
 LAKE CIRCULATION RULES:
 
-The lake has circulation pattern for rowing and canoeing, this is illustrated in the diagram below.  Before paddling, please ensure you have studied this and are aware of the Lake Hazards.
+The lake has circulation pattern for rowing and canoeing, this is illustrated in the diagram below (north is on the Left).  Before paddling, please ensure you have studied this and are aware of the Lake Hazards.
 
 <img src="/public/images/circulation-route-1.jpg" style="width:100%">
 
@@ -59,8 +61,8 @@ Miss Elizabeth:
 
 Lake Hazards:
 
-- Submerged metal structure at north end of lake (on right hand side of the statue looking north)
-- Shallow water
+- Submerged metal structure at north end of lake (on right hand side of the statue looking north) - see map H point
+- Shallow water - see map H points
 - Overhanging branches
 - Excessive weed
 - Fishing lines

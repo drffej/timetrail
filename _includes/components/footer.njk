@@ -1,7 +1,131 @@
+<!-- image handler -->
+<!--
+<div id="imageModal" class="w3-modal" onclick="this.style.display='none'">
+    <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+    <div class="w3-modal-content w3-animate-zoom">
+        <img id="img01" style="width:100%">
+        <div class="modal-caption" id="captionText"></div>
+    </div>
+</div>
+-->
+
+<style>
+    .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 9990; /* Sit on top */
+    padding-top: 75px; /* Location of the box */
+    left: 0;
+    top: 0;
+    cursor: pointer;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    width: 90%;
+    display: block;
+}
+  
+
+/* The Close Button */
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.modal-close:hover,
+.modal-close:focus {
+color: #bbb;
+text-decoration: none;
+cursor: pointer;
+}
+
+/* Caption of Modal Image */
+.modal-caption {
+    margin: auto;
+    display: block;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+  
+/* Add Animation */
+.modal-content, .modal-caption {  
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+</style>
+
+<div id="imageModal" class="modal">
+  <span class="modal-close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div class="modal-caption" id="captionText"></div>
+</div>
+
+
+<script>
+function imageModal(className){
+    // display popup for all images contained in the elements classname
+
+    // Get the modal
+    var modal = document.getElementById("imageModal");
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("captionText");
+
+    // Grab all the images
+    var myDivClasses = document.getElementsByClassName(className)
+    console.log(myDivClasses)
+    if ( myDivClasses && modal && modalImg){
+        for(var i=0; i < myDivClasses.length; i++){
+            var images = myDivClasses[i].getElementsByTagName("img")
+            if (images){
+                for (var img=0; img < images.length; img++){
+                    // Get the image and insert it inside the modal - use its "alt" text as a caption
+                    images[img].style.cursor = "pointer"
+                    images[img].onclick = function(){
+                        modal.style.display = "block";
+                        modalImg.src = this.src;
+                        captionText.innerHTML = this.alt;
+                    }
+                }
+            }   
+        }
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    modal.onclick = function() { 
+        modal.style.display = "none";
+    }
+}
+
+window.addEventListener('load',
+  function(){
+    // add click event to images
+    imageModal("w3-container");
+  }
+);
+</script>
+
+
+
 <!-- Footer -->
 <footer class="w3-container w3-padding w3-center w3-opacity">  
  
     <a href='/privacy'>Privacy Policy</a>|<a href="/contact">Contact us</a>
- 
- <p>&copy; 2023 Jeff Parker</p>
+ <p>
+ <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+</p>
 </footer>

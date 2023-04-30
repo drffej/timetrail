@@ -14,7 +14,7 @@ Doing the challenges can be a journey - improving fitness, technique and learnin
 
 Independent paddling is another part of the challenge, please ensure you read the [Safety page](/safety) and the [Trentham Canoe Club Paddler Policy](https://drive.google.com/drive/folders/11EhDrVyTXSoiYzUq1QNy-JNQAecKcHPW) before doing the challenges.
 
-Finally these challenges are about human power, so no wash hanging, sails, motors or other non-human means of assistance.
+Finally these challenges are about human power, so no wash hanging (unless you are doing the challenge as a group), sails, motors or other non-human means of assistance.
 
 The following challenges are available, pick one, or do them all, you choose.
 
