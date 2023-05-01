@@ -3,105 +3,32 @@ layout: base.njk
 ---
 
 
-<script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
-<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
-
-<script>
-state = {
-    name: '',
-    email: '',
-    message: '',
-};
-handleInputChange = (event) => {
-    const target = event.target;
-    const value = target.value;
-    const name = target.name;
-    this.setState({
-        [name]: value
-    });
-    console.log(setState)
-};
-encode = (data) => {
-    return Object.keys(data)
-        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-        .join("&");
-}
-
-handleSubmit2 = async (e) => {
-    e.preventDefault();
-
-    Object.keys(state).forEach(element => { 
-        console.log(element)
-        const value = document.getElementById(element).value;
-        state[element] = value;
-        console.log(element,value, state)
-    })
-
-    const options = {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: encode({ 'form-name': 'contactForm', ...state })
-    }
-
-    fetch(
-        "/",
-        options
-    )
-    .then(function (response) {
-        //window.location.assign('/contact-thanks/');
-        console.log('done')
-    })
-    .catch(function (error) {
-        console.log('error', error);
-    });
-
-    console.log(options)
-
-}
-handleSubmit = async (e) => {
-    e.preventDefault();
-    const options = {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: this.encode({ 'form-name': 'contactForm', ...this.state })
-    }
-
-    fetch(
-        "/",
-        options
-    )
-    .then(function (response) {
-        window.location.assign('/contact-thanks/');
-    })
-    .catch(function (error) {
-        console.log(error);
-    });
-};
-</script>
-
-<form id="contact" name="contact" method="POST"  onSubmit={handleSubmit2(event)}>
-<ion-list>
-  <ion-item>
-    <ion-input id="name" label="Your Name" label-placement="stacked" clear-input="true" placeholder="Enter text to see clear button" value={this.pojioopopstate.name} onChange=handleInputChange>
-    </ion-input>
-  </ion-item>
-
-  <ion-item>
-    <ion-input id="email" type="email" label="Your Email" label-placement="stacked" placeholder="Enter text, leave the input, come back and type to clear" value='jeff@riberlodge.biz' onChange={this.handleInputChange}>
-    </ion-input>
-  </ion-item>
-
-  <ion-item>
-    <ion-textarea id="message" placeholder="Type something here" auto-grow="true" label="Message"  label-placement="stacked"
-        value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tellus sem, auctor accumsan egestas sed, venenatis at ex. Nam consequat ex odio, suscipit rhoncus orci dictum eget. Aenean sit amet ligula varius felis facilisis lacinia nec volutpat nulla. Duis ullamcorper sit amet turpis sed blandit. Integer pretium massa eu faucibus interdum.">
-    </ion-textarea>
-  </ion-item>
-  <ion-item>
-    <ion-button type="submit" slot="end" >
-        Send
-    </ion-button>
-</ion-item>
-</ion-list>
+<div class="w3-container w3-teal">
+  <h4>Contact Us</h4>
+</div>
+<form class="w3-container w3-card-4 w3-light-grey" name="contact" method="POST" data-netlify="true" >
+  <p>
+    Please send us a message by filling out the form below:</p>
+  <p>
+    <label class="w3-text-gray w3-small">Your Name</label> <input type="text" class="w3-input w3-border" name="name" />
+  </p>
+  <p>
+    <label class="w3-text-gray w3-small">Your Email</label><input type="email" class="w3-input w3-border" name="email" />
+  </p>
+  <p>
+    <label class="w3-text-gray w3-small">Message</label> <textarea class="w3-input w3-border" name="message" style="resize:none"></textarea>
+  </p>
+  <p>
+    <button type="submit" class="w3-btn w3-padding w3-teal" style="width:120px">Send &nbsp; ❯</button>
+  </p>
 </form>
-
+<p>&nbsp;</p>
+<div class="w3-container w3-teal">
+  <h4>Submit a challenge time</h4>
+</div>
+<div class="w3-container w3-card-4 w3-light-grey w3-border-32">
+    <p>Submit a challenge time</a>
+    <p>
+    <a href='/submit-time' class="w3-btn w3-padding w3-teal">Submit a time &nbsp; ❯</a>
+  </p>
+</div>
