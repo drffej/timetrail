@@ -14,12 +14,13 @@ One Lap of the lake, starting at the  end of the lake, around the end of the fir
 START and FINISH:
 The start and finish is the red buoy next to the moored dragon boat and outriggers. The red buoy is the 2nd one from the end (i.e. just before the orange one).  Start and finish on the right of the buoy, in the direction you are heading.
 
-THE TURN:
-The turn point is around the end of the first island. Turn counter-clock wise and head to right hand side of the Island back to the boat house.
+THE TURNS:
+
+There two 90% degree turns to get around the Island. Turn one is next to the fisherman jetty on right at the north end of the first island - just before the roller-coaster sculpture.   Turn two is at end of the first island.  Leave at least 10-25m of room.  Both turns are counter-clock wise.
 
 COURSE:
-The course follows the normal circulation route on the lake, keep an eye out for other paddlers and rowers.  If you cut corners, you time will not count.
+The course follows the normal circulation route on the lake, apart from the cut across from the Jetty to the end of the Island.  Keep an eye out for other paddlers and rowers.  If you cut corners, you time will not count.
 
-Send your time, category e.g. WK1 and type of boat you used to the contact details below.
+Send your time, category e.g. WK1 and type of boat you used to the <a href="/contact-time">contact details</a> below.
 
-Any questions please get in touch.
+Any questions please get in <a href='/contact/'>touch</a>.

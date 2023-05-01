@@ -15,11 +15,11 @@ START and FINISH:
 The start and finish is the red buoy next to the moored dragon boat and outriggers. The red buoy is the 2nd one from the end (i.e. just before the orange one).  Start and finish on the right of the buoy, in the direction you are heading.
 
 THE TURN:
-The turn point is down the end of the lake near the statue.   It is a red buoy, turn counter-clock wise and head to right hand side of the Islands back to the boat   house.
+The turn point is down the end of the lake near the statue.   It is a red buoy, turn counter-clock wise and head to right hand side of the Islands back to the boat house.
 
 COURSE:
 The course follows the normal circulation route on the lake, keep an eye out for other paddlers and rowers.  If you cut corners, you time will not count.
 
-Send your time, category e.g. WK1 and type of boat you used to the contact details below.
+Send your time, category e.g. WK1 and type of boat you used to the <a href="/contact-time">contact details</a> below.
 
-Any questions please get in touch.
+Any questions please get in <a href='/contact/'>touch</a>.

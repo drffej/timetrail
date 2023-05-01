@@ -1,7 +1,7 @@
 ---
 layout: home.njk
 title: Trentham Lake Challenge
-description: The Trentham lake challenge are a series of time trials to record paddling achievements around Trentham Lake.
+description: A series of paddling time trials around Trentham Lake.
 ---
 
 ## {{ title }}
