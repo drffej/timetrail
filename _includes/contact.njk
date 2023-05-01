@@ -80,10 +80,10 @@ handleSubmit = async (e) => {
 };
 </script>
 
-<form id="contact" name="contact" method="POST" data-netlify="true"  onSubmit={handleSubmit2(event)}>
+<form id="contact" name="contact" method="POST"  onSubmit={handleSubmit2(event)}>
 <ion-list>
   <ion-item>
-    <ion-input id="name" label="Your Name" label-placement="stacked" clear-input="true" placeholder="Enter text to see clear button" value={this.state.name} onChange=handleInputChange>
+    <ion-input id="name" label="Your Name" label-placement="stacked" clear-input="true" placeholder="Enter text to see clear button" value={this.pojioopopstate.name} onChange=handleInputChange>
     </ion-input>
   </ion-item>
 
@@ -105,24 +105,3 @@ handleSubmit = async (e) => {
 </ion-list>
 </form>
 
-Form here
-<form name="contact" method="POST" data-netlify="true" >
-  <p>
-    <label>Your Name: <input type="text" name="name" /></label>
-  </p>
-  <p>
-    <label>Your Email: <input type="email" name="email" /></label>
-  </p>
-  <p>
-    <label>Your Role: <select name="role[]" multiple>
-      <option value="leader">Leader</option>
-      <option value="follower">Follower</option>
-    </select></label>
-  </p>
-  <p>
-    <label>Message: <textarea name="message"></textarea></label>
-  </p>
-  <p>
-    <button type="submit">Send</button>
-  </p>
-</form>
