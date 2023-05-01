@@ -1,6 +1,6 @@
 ---
 layout: event.njk
-title: Lake Loop
+title: One Lake Loop or 2.5K
 course: /courses/aroundthelake
 event_id: 3
 eleventyNavigation:

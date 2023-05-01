@@ -9,7 +9,7 @@ event_id: 1
 The {{ title }} are a series of time trials to record paddling achievements around Trentham Lake ... its not about records, but how well you can do the challenges and how you improve over time. There are three challenges to choose from:
 
 <div class="w3-row-padding" style="margin:0 -16px">
-{% for course in collections.courses %}
+{% for course in collections.timetrials %}
     <div class="w3-third">
             <div class="w3-card w3-container w3-hover-shadow w3-theme w3-margin-bottom" onclick="location.href='{{ course.page.url  }}'" style="cursor: pointer">
                     <h4>{{ course.data.title }}</h4>

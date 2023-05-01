@@ -9,37 +9,33 @@ layout: base.njk
   <p>
     Please send us your challenge time by filling out the form below:</p>
   <p>
-    <label class="w3-text-gray w3-small">Your Name</label> <input type="text" class="w3-input w3-border" name="name" />
+    <label class="w3-text-gray w3-small">Your Name</label> <input type="text" class="w3-input w3-border" name="name" required/>
   </p>
   <p>
-    <label class="w3-text-gray w3-small">Your Email</label><input type="email" class="w3-input w3-border" name="email" />
+    <label class="w3-text-gray w3-small">Your Email</label><input type="email" class="w3-input w3-border" name="email" required />
   </p>
   <p>
-    <label class="w3-text-gray w3-small">Your Club</label> <input type="text" value='Trentham CC' class="w3-input w3-border" name="club" />
+    <label class="w3-text-gray w3-small">Your Club</label> <input type="text" value='Trentham CC' class="w3-input w3-border" name="club" required />
   </p>
   <p>
-    <label class="w3-text-gray w3-small">Your Boat</label><input type="text" class="w3-input w3-border" name="boat" />
+    <label class="w3-text-gray w3-small">Your Boat</label><input type="text" class="w3-input w3-border" name="boat" required />
   </p>
   <p>
-    <label class="w3-text-gray w3-small">Your Time</label><input type="text" class="w3-input w3-border" name="time" value="hh:mm:ss" />
+    <label class="w3-text-gray w3-small">Your Time</label><input type="text" class="w3-input w3-border" name="time" value="hh:mm:ss" required />
   </p>
   <p>
-    <label class="w3-text-gray w3-small">Date challenge completed</label><input type="date" class="w3-input w3-border" name="date" value="hh:mm:ss" />
+    <label id='date' class="w3-text-gray w3-small">Date challenge completed</label><input type="date" class="w3-input w3-border" name="date" required />
   </p>
   <p>
     <label>The challenge completed:</label><br/>
-    <input id="male" class="w3-radio" type="radio" name="gender" value="male" >
-    <label>Male</label>
-    <br>
-    <input id="female" class="w3-radio" type="radio" name="gender" value="female">
-    <label>Female</label>
-    <br>
-    <input id="unknown" class="w3-radio" type="radio" name="gender" value="">
-    <label>Don't know (Disabled)</label>
+    {% for trial in collections.timetrials %}
+    <input class="w3-radio" type="radio" name="challenge" value="{{ trial.data.title }}" required />
+    <label>{{ trial.data.title }}</label><br/>
+    {% endfor %}
   </p>
   <p>
-    <input id="milk" class="w3-check" type="checkbox" checked="checked">
-    <label>I agree to have my details published and our <a href='/privacy'>Privacy Policy</a></label>
+    <input class="w3-check" type="checkbox" name="agree" checked="checked" required />
+    <label>I agree to have my details published and the <a href='/privacy'>Privacy Policy</a></label>
   <p>
     <label class="w3-text-gray w3-small">Message</label> <textarea class="w3-input w3-border" name="message" style="resize:none"></textarea>
   </p>
@@ -47,3 +43,14 @@ layout: base.njk
     <button type="submit" class="w3-btn w3-padding w3-teal" style="width:120px">Send &nbsp; ❯</button>
   </p>
 </form>
+
+<script>
+    window.addEventListener('load',
+  function(){
+
+    var date = new Date();
+    var currentDate = date.toISOString().substring(0,10);
+    document.getElementById('date').value = 'kkkksssssk';
+    }
+);
+</script>
