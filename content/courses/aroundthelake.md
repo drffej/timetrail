@@ -20,6 +20,6 @@ The turn point is down the end of the lake near the statue.   It is a red buoy, 
 COURSE:
 The course follows the normal circulation route on the lake, keep an eye out for other paddlers and rowers.  If you cut corners, you time will not count.
 
-Send your time, category e.g. WK1 and type of boat you used to the <a href="/contact-time">contact details</a> below.
+Send your time, category e.g. WK1 and type of boat you used to the <a href="/submit-time">contact details</a> below.
 
 Any questions please get in <a href='/contact/'>touch</a>.

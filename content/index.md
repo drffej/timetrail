@@ -23,7 +23,7 @@ The {{ title }} are a series of time trials to record paddling achievements arou
 
 The site provides a permanent record for those that want to push their limits on how fast they can paddle the Lake challenges.  Paddlers may be doing it for the personal kudos or want to see how they stack up against the other paddlers doing the challenges.  Hopefully it will inspire paddlers to do more at Trentham Lake!
 
-Doing the challenges can be a journey - improving fitness, technique and learning new skills e.g. how do a time trial course.  You also get to choose your craft and this will hopefully inspire paddlers to try out different boats and paddle crew boats as a team.
+Doing the challenges can help improve fitness, technique and learn new skills e.g. how do a time trial course.  You also get to choose your craft and this will hopefully inspire paddlers to try out different boats and paddle crew boats as a team.
 
 Independent paddling is another part of the challenge, so please ensure you read the [Safety page](/safety) and the [Trentham Canoe Club Paddler Policy](https://drive.google.com/drive/folders/11EhDrVyTXSoiYzUq1QNy-JNQAecKcHPW) before doing the challenges.  If you want to LEARN how do the challenges safely or go about independent paddling - ask one of the club coaches for help.
 

@@ -21,6 +21,6 @@ There two 90% degree turns to get around the Island. Turn one is next to the fis
 COURSE:
 The course follows the normal circulation route on the lake, apart from the cut across from the Jetty to the end of the Island.  Keep an eye out for other paddlers and rowers.  If you cut corners, you time will not count.
 
-Send your time, category e.g. WK1 and type of boat you used to the <a href="/contact-time">contact details</a> below.
+Send your time, category e.g. WK1 and type of boat you used to the <a href="/submit-time">contact details</a> below.
 
 Any questions please get in <a href='/contact/'>touch</a>.
