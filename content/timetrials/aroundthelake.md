@@ -1,6 +1,7 @@
 ---
 layout: event.njk
 title: One Lake Loop or 2.5K
+description: "Trentham TT- lake loop leader board"
 course: /courses/aroundthelake
 event_id: 3
 eleventyNavigation:

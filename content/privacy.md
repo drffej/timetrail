@@ -1,6 +1,7 @@
 ---
 layout: base.njk
 title: Privacy Policy
+description: "Trentham TT- privacy policy"
 ---
 
 ## Privacy Statement for Trentham Challenge

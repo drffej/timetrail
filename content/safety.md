@@ -1,5 +1,6 @@
 ---
 layout: base.njk
+description: "Trentham TT- safety information"
 eleventyNavigation:
   key: Safety
   title: Safety

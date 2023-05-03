@@ -1,6 +1,7 @@
 ---
 layout: event.njk
 title: Around the Island
+description: "Trentham TT- around the Island leader board"
 course: /courses/island
 event_id: 1
 eleventyNavigation:
