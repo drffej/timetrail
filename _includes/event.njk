@@ -163,9 +163,11 @@ window.addEventListener("touchend",function(event){
 
     if(end > start + offset){
       //a left -> right swipe
+      swipeRight();
     }
     if(end < start - offset ){
       //a right -> left swipe
+      swipeLeft();
     }
   }
 });
