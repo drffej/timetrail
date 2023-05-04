@@ -122,7 +122,7 @@ function show(element){
 
 var urlList = [];
 {% for event in collections.timetrials %}
-  urlList.push() = event.page.url;
+  urlList.push() = {{ event.page.url   }}
 {% endif %}
 var slideIndex = 1;
 showDivs(slideIndex);
