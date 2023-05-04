@@ -4,7 +4,7 @@ name: Jeff Parker
 club: Trentham CC
 events:
   - event: Around the Lake
-    id: 1
+    id: 3
     races:
       - id: '1'
         date: 30/04/23
@@ -29,7 +29,7 @@ events:
         boat: 'K1 Kayak'
         time: '00:32:10'
   - event: Around the Island
-    id: 3
+    id: 1
     races:
       - id: '1'
         date: 30/04/23

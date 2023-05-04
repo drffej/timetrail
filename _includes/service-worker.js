@@ -19,7 +19,7 @@ const CACHE_KEYS = {
   
   // add any hosts that you want to bypass
   const IGNORED_HOSTS = [
-    '',
+    'localhost',
   ];
   
   const addItemsToCache = (cacheName, items = []) => {

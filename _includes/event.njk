@@ -89,6 +89,16 @@
   </div>
 </div>
 
+
+<div class="w3-center w3-content">
+  {% for event in collections.timetrials %}
+  <a href="{{event.page.url}}" 
+     class="w3-btn w3-border w3-border-teal {% if page.url == event.page.url %} w3-teal  w3-text-white {% else %} w3-white w3-border-teal w3-text-teal {% endif %} w3-round-large">
+     {{ event.data.title }}</a> 
+
+  {% endfor %}
+</div>
+
 <div class="w3-content" style="max-width:2000px;margin-top:46px">
 
 <!-- Footer -->
@@ -107,6 +117,60 @@ function show(element){
   }
   toggleElement = !toggleElement;
 }
+
+// swipe support
+
+var urlList = [];
+{% for event in collections.timetrials %}
+  urlList.push() = event.page.url;
+{% endif %}
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function swipeLeft() {
+  slideIndex == slideIndex - 1;
+  showEvent()
+}
+
+function swipeRight() {
+  slideIndex == slideIndex + 1;
+  showEvent()
+}
+
+function showEvent(){
+  if (slideIndex < 0) { slideIndex = urlList.length() }
+  if (slideIndex > urlList.length) { slideIndex = 0 }
+  window.location.href = urlList[slideIndex];
+}
+
+
+var start = null;
+window.addEventListener("touchstart",function(event){
+  if(event.touches.length === 1){
+    //just one finger touched
+    start = event.touches.item(0).clientX;
+  }else{
+      //a second finger hit the screen, abort the touch
+      start = null;
+  }
+});
+
+window.addEventListener("touchend",function(event){
+  var offset = 100;//at least 100px are a swipe
+  if(start){
+    //the only finger that hit the screen left it
+    var end = event.changedTouches.item(0).clientX;
+
+    if(end > start + offset){
+      //a left -> right swipe
+    }
+    if(end < start - offset ){
+      //a right -> left swipe
+    }
+  }
+});
+
+
 </script>
 
 </body>

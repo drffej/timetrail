@@ -4,7 +4,7 @@ name: Joe Blogs
 club: Trentham CC
 events:
   - event: Around the Lake
-    id : 1
+    id : 3
     races:
       - id: '1'
         date: dd/yy/mm
