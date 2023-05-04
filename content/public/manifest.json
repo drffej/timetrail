@@ -1,6 +1,6 @@
 {
-    "short_name": "Trentham TT",
-    "name": "Trentham Lake Challenge",
+    "short_name": "Time Trial",
+    "name": "Time Trial Challenge",
     "lang" : "en-us",
     "icons": [
       {
@@ -28,22 +28,7 @@
     "orientation" : "any",
     "scope": "/",
     "theme_color": "#029688",
-    "shortcuts": [
-      {
-        "name": "Lake Loop",
-        "short_name": "Loop",
-        "description": "Full lake lap time trial",
-        "url": "/timetrials/island/",
-        "icons": [{ "src": "/public/icons-green/android-chrome-192x192.png", "sizes": "192x192" }]
-      },
-      {
-        "name": "2 laps or 5K?",
-        "short_name": "5K",
-        "description": "5K lake challenge",
-        "url": "/timetrials/5k/",
-        "icons": [{ "src": "/public/icons-green/android-chrome-192x192.png", "sizes": "192x192" }]
-      }
-    ],
-    "description": "Trentham Lake Challenge - 3 time time trials",
+    "shortcuts": [],
+    "description": "Time Trial Challenge",
     "screenshots": []
   }

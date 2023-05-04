@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 title: Time trials
-description: "Trentham TT- course results index"
+description: "Course results index"
 eleventyExcludeFromCollections: true
 ---
 

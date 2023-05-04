@@ -1,5 +1,5 @@
 ---
 title: Submit a time
-description: "Trentham TT- submit challenge result"
+description: "Submit challenge result"
 layout: submit-time.njk
 ---

@@ -1,12 +1,12 @@
 ---
 layout: base.njk
 title: Privacy Policy
-description: "Trentham TT- privacy policy"
+description: "Privacy policy"
 ---
 
-## Privacy Statement for Trentham Challenge
+## Privacy Statement
 
-This privacy policy describes how you personal information is collected, used, and shared when you visit the Trentham Challenge Web pages (the "Site").
+This privacy policy describes how you personal information is collected, used, and shared when you visit these Web pages (the "Site").
 
 ### Personal Information we collect
 

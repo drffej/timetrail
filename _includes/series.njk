@@ -13,11 +13,24 @@
   <div class="w3-content">
     <h1>{{ title }}</h1>
     <p>{{ content | safe }}</p>
+dddd
+   
+    {% for date in collections.competitors  | getSeriesDates(event_id) %}
+     <li> {{ date }}  xxxx</li>
+        {% for race in collections.competitors  | getFastestTimeDate(date, event_id) %}
+        <p>{{ race.time }} yyy</p>
+        {% endfor %}
+
+    {% endfor %}
+    {% set race = collections.competitors  | getFastestTimeDate('dd/yy/mm', event_id) %}
+    {{ race | log }}
+    kkkkkkk
     <a href="#leader" class="w3-btn w3-white w3-border w3-border-red w3-text-red w3-round-large">Leader Board</a>
     <a href="#runs" class="w3-btn w3-white w3-border w3-border-red w3-text-red w3-round-large">All Runs</a>
     <a href='/submit-time' class="w3-btn w3-white w3-border w3-border-theme w3-text-theme w3-round-large">Submit a time &nbsp; ❯</a>
-    <h3 id="leader">Leader Board</h3>
     
+    {% for date in collections.competitors  | getSeriesDates( event_id) %}
+    <h3 id="leader">Leader Board for {{ date }}</h3> 
     <div class="w3-responsive">
       <span class="w3-opacity">Click on columns to sort</span>
       <table class="sortable w3-table w3-border w3-striped">
@@ -34,7 +47,7 @@
       </thead>
       <tbody>
       {% set index = 1 %}
-      {% for race in collections.competitors| getFastestTime( event_id)  %}
+      {% for race in collections.competitors| getFastestTimeDate(date, event_id)  %}
           <tr>
           <td>{{ race.position }}{{ race.eq }}</td>
           <td><a href="{{ race.page }}">{{ race.name }}</a></td>
@@ -50,7 +63,7 @@
       </table>
     </div>
     <p class="w3-opacity">{{ index-1 }} {% if index-1 > 1 %} paddlers. {% else %} paddler.{% endif %}
-  
+    {% endfor %}
     <h3 id="runs">All Runs</h3>
 
     <div class="w3-responsive">

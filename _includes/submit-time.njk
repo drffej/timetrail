@@ -2,7 +2,7 @@
 layout: base.njk
 ---
 
-<div class="w3-container w3-teal">
+<div class="w3-container w3-theme">
   <h4>Submit a challenge time</h4>
 </div>
 <form class="w3-container w3-card-4 w3-light-grey" name="challenge" action="/thanks-challenge" method="POST" data-netlify="true" >
@@ -15,7 +15,7 @@ layout: base.njk
     <label class="w3-text-gray w3-small">Your Email</label><input type="email" class="w3-input w3-border" name="email" required />
   </p>
   <p>
-    <label class="w3-text-gray w3-small">Your Club</label> <input type="text" value='Trentham CC' class="w3-input w3-border" name="club" required />
+    <label class="w3-text-gray w3-small">Your Club</label> <input type="text" value='' class="w3-input w3-border" name="club" required />
   </p>
   <p>
     <label class="w3-text-gray w3-small">Your Boat</label><input type="text" class="w3-input w3-border" name="boat" required />
@@ -40,17 +40,6 @@ layout: base.njk
     <label class="w3-text-gray w3-small">Message</label> <textarea class="w3-input w3-border" name="message" style="resize:none"></textarea>
   </p>
   <p>
-    <button type="submit" class="w3-btn w3-padding w3-teal" style="width:120px">Send &nbsp; ❯</button>
+    <button type="submit" class="w3-btn w3-padding w3-theme" style="width:120px">Send &nbsp; ❯</button>
   </p>
 </form>
-
-<script>
-    window.addEventListener('load',
-  function(){
-
-    var date = new Date();
-    var currentDate = date.toISOString().substring(0,10);
-    document.getElementById('date').value = 'kkkksssssk';
-    }
-);
-</script>

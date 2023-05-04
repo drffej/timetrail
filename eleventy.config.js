@@ -112,7 +112,70 @@ module.exports = function(eleventyConfig) {
 		return addPositions(results.sort(compare));
 	});
 
+    // Return all dates for event id
+	eleventyConfig.addFilter("getSeriesDates", function( competitorCollection, id) {
+		if (typeof id === 'undefined'){
+			console.log('********* getSeriesDates: event id not supplied *****')
+		}
+		//console.log('got :', competitorCollection,id )
+		//console.log(competitorCollection)
 
+		var results = {}; 
+		competitorCollection.forEach(competitor => {
+			// loop through each competitor
+			const events = competitor.data.events;
+			events.forEach(event =>{
+				// add all results for event id
+				if (event.id === id && event.races.length > 0){
+					for(var i=0; i < event.races.length; i++){
+						results[event.races[i].date] = event.races[i].date
+					}
+				}
+			})
+		});
+		
+		return Object.keys(results);
+	});
+
+
+	// Return fastest all times for event
+	eleventyConfig.addFilter("getFastestTimeDate", function( competitorCollection, date, id) {
+		//console.log('got :', competitorCollection,id )
+		//console.log(competitorCollection)
+
+		var results = []; 
+		competitorCollection.forEach(competitor => {
+			// loop through each competitor
+			const events = competitor.data.events;
+			events.forEach(event =>{
+				// add all results for event id
+				if (event.id === id && event.races.length > 0){
+					var secs = 0;
+					var raceResult = null;
+					console.log('got event')
+					for(var i=0; i < event.races.length; i++){
+						console.log(event.races[i].date, date, (event.races[i].date === date))
+						if (event.races[i].date == date){
+							secs = seconds(event.races[i].time);
+							raceResult = { ...event.races[i], 'seconds': secs, name: competitor.data.name, club: competitor.data.club, page: competitor.page.url };
+							results.push(raceResult)
+							console.log(raceResult)
+						}
+					}
+				}
+			})
+		});
+
+		function compare(a,b){
+			if (a.seconds < b.seconds)
+			return -1;
+			if (a.seconds > b.seconds)
+				return 1;
+			return 0;
+		}
+		
+		return addPositions(results.sort(compare));
+	});
 
 	// add pass through
 	//eleventyConfig.addPassthroughCopy("/public/*.png");

@@ -1,6 +1,6 @@
 ---
 layout: contact.njk
-description: "Trentham TT- contact form"
+description: "Contact form"
 title: Contact us
 ---
 
