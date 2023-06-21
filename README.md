@@ -1,6 +1,6 @@
 # Time Trial
 
-Simple website generator for time trials, content deploys onto [Netlify](netlify.com) website .  See [timetrail.netlify.app](timetrail.netlify.app) for example.
+Simple website generator for time trials, content deploys onto [Netlify](https://netlify.com) website. Deploys as a PWA app. See [timetrail.netlify.app](https://timetrail.netlify.app) for example.
 
 Minimal instructions, raised github issue if you want better documentation.
 
