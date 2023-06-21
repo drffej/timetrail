@@ -1,7 +1,7 @@
 ---
 layout: person.njk
-name: Jeff Parker
-club: Trentham CC
+name: Andy Other
+club: Boat CC
 events:
   - event: Open
     id: 1

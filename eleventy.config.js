@@ -200,7 +200,6 @@ module.exports = function(eleventyConfig) {
 			"ico",
 			"svg",
 			"xml",
-			"json",
 			"webmanifest",
 			"txt"
 		],

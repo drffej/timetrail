@@ -27,7 +27,7 @@
     "display": "standalone",
     "orientation" : "any",
     "scope": "/",
-    "theme_color": "#029688",
+    "theme_color": "{{ site.themeColor }}",
     "shortcuts": [],
     "description": "Time Trial Challenge",
     "screenshots": []
